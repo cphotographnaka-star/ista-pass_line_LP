@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>ISTA PASS｜クリエイターズ・ラボ アイスタ名古屋</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0a;
+  --bg2:#111111;
+  --bg3:#181818;
+  --gold:#c8a951;
+  --gold-light:#f0d080;
+  --gold-dark:#8a7230;
+  --gold-grad:linear-gradient(90deg,#5a4820,#c8a951,#f0d080,#c8a951,#5a4820);
+  --text:#e8e8e8;
+  --text-sub:#999;
+  --red:#e04040;
+  --green:#2ec48a;
+  --r:12px;
+}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:15px;
+  line-height:1.7;
+  max-width:480px;
+  margin:0 auto;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ───── GOLD TOP BAR ───── */
+.topbar{
+  background:var(--gold-grad);
+  text-align:center;
+  padding:8px 16px;
+  font-size:13px;
+  font-weight:700;
+  color:#0a0a0a;
+  letter-spacing:.05em;
+}
+
+/* ───── SCARCITY STRIP ───── */
+.scarcity{
+  background:#1a1000;
+  border-bottom:1px solid #3a2800;
+  padding:12px 20px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.scarcity-dot{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--red);
+  box-shadow:0 0 8px var(--red);
+  flex-shrink:0;
+  animation:blink 1.2s infinite;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.scarcity-text{font-size:13px;line-height:1.4}
+.scarcity-num{color:var(--gold-light);font-weight:700}
+
+/* ───── HERO ───── */
+.hero{
+  padding:48px 24px 40px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';
+  position:absolute;
+  top:-80px;left:50%;
+  transform:translateX(-50%);
+  width:300px;height:300px;
+  background:radial-gradient(circle,rgba(200,169,81,.12) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-badge{
+  display:inline-block;
+  background:rgba(200,169,81,.15);
+  border:1px solid rgba(200,169,81,.4);
+  color:var(--gold-light);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.12em;
+  padding:5px 14px;
+  border-radius:30px;
+  margin-bottom:20px;
+}
+.hero h1{
+  font-size:26px;
+  font-weight:900;
+  line-height:1.3;
+  margin-bottom:12px;
+  letter-spacing:-.01em;
+}
+.hero h1 .accent{
+  background:var(--gold-grad);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.hero-sub{
+  font-size:14px;
+  color:var(--text-sub);
+  margin-bottom:28px;
+  line-height:1.6;
+}
+.hero-price{
+  background:var(--bg3);
+  border:1px solid #2a2a2a;
+  border-radius:var(--r);
+  padding:20px;
+  margin-bottom:28px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+.hero-price-from{font-size:13px;color:var(--text-sub);}
+.hero-price-num{
+  font-size:36px;font-weight:900;
+  background:var(--gold-grad);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  line-height:1;
+}
+.hero-price-unit{font-size:14px;color:var(--text-sub)}
+.hero-cta{
+  display:block;
+  background:var(--gold-grad);
+  color:#0a0a0a;
+  font-size:17px;
+  font-weight:900;
+  letter-spacing:.04em;
+  padding:18px 24px;
+  border-radius:var(--r);
+  text-decoration:none;
+  position:relative;
+  overflow:hidden;
+}
+.hero-cta::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(rgba(255,255,255,.15),transparent);
+  pointer-events:none;
+}
+.hero-cta-sub{
+  display:block;
+  font-size:11px;
+  font-weight:500;
+  opacity:.7;
+  margin-top:3px;
+}
+
+/* ───── SECTION ───── */
+.section{padding:40px 20px}
+.section+.section{border-top:1px solid #1e1e1e}
+.section-label{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:10px;letter-spacing:.18em;color:var(--gold);
+  font-weight:700;margin-bottom:8px;
+}
+.section-label::before{
+  content:'';display:block;width:20px;height:1px;background:var(--gold);
+}
+.section-title{
+  font-size:22px;font-weight:900;line-height:1.3;
+  margin-bottom:8px;
+}
+.section-title .g{
+  background:var(--gold-grad);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.section-desc{font-size:14px;color:var(--text-sub);line-height:1.7;margin-bottom:24px;}
+
+/* ───── FEATURES ───── */
+.feat-list{display:flex;flex-direction:column;gap:16px}
+.feat-item{
+  background:var(--bg3);
+  border:1px solid #222;
+  border-radius:var(--r);
+  padding:18px 20px;
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+}
+.feat-icon{
+  width:42px;height:42px;flex-shrink:0;
+  border-radius:10px;
+  background:linear-gradient(135deg,#1e1700,#3a2e00);
+  border:1px solid var(--gold-dark);
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;
+}
+.feat-title{font-size:15px;font-weight:700;margin-bottom:4px}
+.feat-desc{font-size:13px;color:var(--text-sub);line-height:1.6}
+
+/* ───── BOOKING WINDOW ───── */
+.booking-intro{
+  background:var(--bg3);
+  border:1px solid #222;
+  border-radius:var(--r);
+  padding:20px;
+  margin-bottom:16px;
+  font-size:13px;
+  color:var(--text-sub);
+  line-height:1.7;
+}
+.booking-cards{display:flex;flex-direction:column;gap:12px}
+.bk-card{
+  border-radius:var(--r);
+  overflow:hidden;
+  border:1px solid #2a2a2a;
+}
+.bk-head{
+  padding:10px 16px;
+  font-size:12px;font-weight:700;letter-spacing:.06em;
+  display:flex;align-items:center;gap:8px;
+}
+.bk-head.std{background:linear-gradient(90deg,#1a1a1a,#222)}
+.bk-head.cre{background:linear-gradient(90deg,#1a1500,#2a2000)}
+.bk-head.pro{background:linear-gradient(90deg,#1a0e0e,#2a1800)}
+.bk-head .plan-tag{
+  font-size:10px;padding:3px 8px;border-radius:20px;
+  font-weight:700;letter-spacing:.06em;
+}
+.bk-head.std .plan-tag{background:#2a2a2a;color:#bbb}
+.bk-head.cre .plan-tag{background:rgba(200,169,81,.2);color:var(--gold)}
+.bk-head.pro .plan-tag{background:rgba(200,100,50,.2);color:#e08040}
+.bk-body{
+  padding:14px 16px;
+  background:var(--bg2);
+}
+.bk-window{
+  font-size:22px;font-weight:900;
+  background:var(--gold-grad);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  margin-bottom:4px;
+}
+.bk-note{font-size:12px;color:var(--text-sub)}
+
+/* ───── PLANS ───── */
+.plan-cards{display:flex;flex-direction:column;gap:20px}
+.plan-card{
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid #2a2a2a;
+  position:relative;
+}
+.plan-card.featured{
+  border-color:var(--gold);
+  box-shadow:0 0 30px rgba(200,169,81,.12);
+}
+.plan-badge{
+  position:absolute;top:0;right:0;
+  background:var(--gold-grad);
+  color:#0a0a0a;
+  font-size:10px;font-weight:900;
+  padding:5px 12px;
+  border-radius:0 14px 0 10px;
+  letter-spacing:.06em;
+}
+.plan-head{
+  padding:20px;
+  background:var(--bg3);
+  border-bottom:1px solid #222;
+}
+.plan-name{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--text-sub);margin-bottom:6px}
+.plan-name.gold{color:var(--gold)}
+.plan-name.orange{color:#e08040}
+.plan-price{
+  font-size:32px;font-weight:900;line-height:1;
+  background:var(--gold-grad);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  margin-bottom:4px;
+}
+.plan-unit{font-size:13px;color:var(--text-sub)}
+.plan-equiv{
+  display:inline-block;
+  margin-top:8px;
+  background:rgba(200,169,81,.1);
+  border:1px solid rgba(200,169,81,.2);
+  color:var(--gold-light);
+  font-size:11px;
+  padding:3px 10px;
+  border-radius:20px;
+}
+.plan-body{padding:20px}
+.plan-stat{
+  display:flex;align-items:center;
+  padding:10px 0;
+  border-bottom:1px solid #1e1e1e;
+  gap:12px;
+}
+.plan-stat:last-child{border-bottom:none}
+.stat-icon{font-size:18px;width:28px;text-align:center;flex-shrink:0}
+.stat-label{font-size:12px;color:var(--text-sub);flex:1}
+.stat-val{font-size:14px;font-weight:700;text-align:right}
+.stat-val.gold{
+  background:var(--gold-grad);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+/* ───── INCENTIVES ───── */
+.incentive-cards{display:flex;flex-direction:column;gap:14px}
+.inc-card{
+  background:var(--bg3);
+  border:1px solid #222;
+  border-radius:var(--r);
+  padding:20px;
+}
+.inc-card-head{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:12px;
+  flex-wrap:wrap;
+}
+.inc-icon{font-size:24px}
+.inc-title{font-size:15px;font-weight:700}
+.inc-amount{
+  font-size:28px;font-weight:900;
+  background:var(--gold-grad);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  margin-bottom:6px;
+}
+.inc-desc{font-size:13px;color:var(--text-sub);line-height:1.6}
+.referral-table{width:100%;margin-top:12px;border-collapse:collapse}
+.referral-table th,.referral-table td{
+  padding:8px 12px;
+  text-align:left;
+  font-size:12px;
+  border-bottom:1px solid #222;
+}
+.referral-table th{color:var(--text-sub);font-weight:500}
+.referral-table td{font-weight:700}
+.gold-text{
+  background:var(--gold-grad);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+/* ───── RULES ───── */
+.rule-list{display:flex;flex-direction:column;gap:12px}
+.rule-item{
+  display:flex;gap:12px;align-items:flex-start;
+  padding:14px 16px;
+  background:var(--bg3);
+  border-radius:10px;
+  border:1px solid #222;
+}
+.rule-mark{
+  width:22px;height:22px;flex-shrink:0;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:700;margin-top:1px;
+}
+.rule-mark.ok{background:rgba(46,196,138,.15);color:var(--green)}
+.rule-mark.ng{background:rgba(224,64,64,.15);color:var(--red)}
+.rule-text{font-size:13px;line-height:1.6;flex:1}
+.rule-text strong{display:block;font-size:14px;margin-bottom:2px}
+
+/* ───── CAUTION BOX ───── */
+.caution{
+  background:#1a0000;
+  border:1px solid #3a0000;
+  border-radius:var(--r);
+  padding:20px;
+  margin-bottom:24px;
+}
+.caution-title{
+  font-size:13px;font-weight:700;color:var(--red);
+  margin-bottom:10px;display:flex;align-items:center;gap:6px;
+}
+.caution ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.caution ul li{font-size:13px;line-height:1.6;padding-left:14px;position:relative;color:#ddd}
+.caution ul li::before{content:'▶';position:absolute;left:0;color:var(--red);font-size:10px;top:3px}
+
+/* ───── FAQ ───── */
+.faq-item{
+  background:var(--bg3);
+  border-radius:10px;
+  overflow:hidden;
+  border:1px solid #222;
+  margin-bottom:8px;
+}
+.faq-q{
+  padding:16px 18px;
+  font-size:14px;font-weight:700;
+  display:flex;align-items:flex-start;gap:10px;
+}
+.faq-q-icon{
+  width:24px;height:24px;flex-shrink:0;
+  border-radius:50%;
+  background:rgba(200,169,81,.15);
+  color:var(--gold-light);
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:900;
+  margin-top:1px;
+}
+.faq-a{
+  padding:0 18px 16px 52px;
+  font-size:13px;color:var(--text-sub);line-height:1.7;
+}
+
+/* ───── FLOW ───── */
+.flow-steps{display:flex;flex-direction:column;gap:0}
+.flow-step{
+  display:flex;gap:16px;align-items:flex-start;
+  position:relative;
+  padding-bottom:24px;
+}
+.flow-step:last-child{padding-bottom:0}
+.flow-step::after{
+  content:'';
+  position:absolute;
+  left:19px;top:40px;
+  width:2px;height:calc(100% - 40px);
+  background:linear-gradient(to bottom,var(--gold-dark),transparent);
+}
+.flow-step:last-child::after{display:none}
+.flow-num{
+  width:40px;height:40px;flex-shrink:0;
+  border-radius:50%;
+  background:var(--gold-grad);
+  color:#0a0a0a;
+  font-size:14px;font-weight:900;
+  display:flex;align-items:center;justify-content:center;
+}
+.flow-content{flex:1;padding-top:8px}
+.flow-title{font-size:14px;font-weight:700;margin-bottom:4px}
+.flow-desc{font-size:13px;color:var(--text-sub);line-height:1.6}
+
+/* ───── PERSON ONLY ───── */
+.person-only{
+  background:var(--bg3);
+  border:1px solid #222;
+  border-left:3px solid var(--gold);
+  border-radius:0 var(--r) var(--r) 0;
+  padding:16px 20px;
+  font-size:13px;
+  line-height:1.7;
+  color:#ddd;
+}
+.person-only strong{color:var(--gold-light);display:block;margin-bottom:4px}
+
+/* ───── BOTTOM CTA ───── */
+.bottom-cta{
+  padding:40px 20px 60px;
+  text-align:center;
+}
+.bottom-cta h2{
+  font-size:22px;font-weight:900;
+  line-height:1.3;margin-bottom:12px;
+}
+.bottom-cta p{
+  font-size:13px;color:var(--text-sub);
+  margin-bottom:24px;line-height:1.7;
+}
+.cta-btn{
+  display:block;
+  background:var(--gold-grad);
+  color:#0a0a0a;
+  font-size:16px;font-weight:900;
+  letter-spacing:.04em;
+  padding:18px 24px;
+  border-radius:var(--r);
+  text-decoration:none;
+  margin-bottom:12px;
+  position:relative;overflow:hidden;
+}
+.cta-btn::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(rgba(255,255,255,.12),transparent);
+}
+.cta-btn-sub{display:block;font-size:11px;font-weight:500;opacity:.7;margin-top:3px}
+.cta-note{font-size:11px;color:#555;margin-top:8px}
+
+/* ───── TAG ───── */
+.tag{
+  display:inline-block;
+  font-size:10px;font-weight:700;letter-spacing:.08em;
+  padding:3px 8px;border-radius:4px;
+}
+.tag-new{background:rgba(46,196,138,.15);color:var(--green)}
+.tag-rec{background:rgba(200,169,81,.15);color:var(--gold)}
+.tag-lim{background:rgba(224,64,64,.15);color:var(--red)}
+
+/* ───── DIVIDER ───── */
+.gold-divider{
+  height:1px;
+  background:var(--gold-grad);
+  opacity:.3;
+  margin:0 20px;
+}
+
+/* ───── FOOTER ───── */
+footer{
+  border-top:1px solid #1e1e1e;
+  padding:24px 20px;
+  font-size:11px;color:#444;
+  line-height:1.8;text-align:center;
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">▶ ISTA PASS — 名古屋のクリエイター専用スタジオサブスク</div>
+
+<!-- SCARCITY STRIP -->
+<div class="scarcity">
+  <div class="scarcity-dot"></div>
+  <div class="scarcity-text">
+    全プラン合計 <span class="scarcity-num">19組限定</span>。
+    満員のプランは受付停止となります。
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">STUDIO SUBSCRIPTION</div>
+  <h1>縛りなし。<br><span class="accent">使いたい時に</span><br>使えるスタジオ。</h1>
+  <p class="hero-sub">
+    名古屋市・クリエイターズ・ラボ アイスタ名古屋の<br>
+    月額スタジオメンバーシップ。<br>
+    スポット¥11,000/hが<strong style="color:var(--gold-light)">最大72%OFF</strong>になります。
+  </p>
+  <div class="hero-price">
+    <span class="hero-price-from">月額</span>
+    <span class="hero-price-num">¥19,800</span>
+    <span class="hero-price-unit">〜（税込）</span>
+  </div>
+  <a href="#apply" class="hero-cta">
+    LINE で詳細・お申し込みはこちら
+    <span class="hero-cta-sub">↓ 下スクロールでプラン詳細</span>
+  </a>
+</div>
+
+<div class="gold-divider"></div>
+
+<!-- 3 FEATURES -->
+<div class="section">
+  <div class="section-label">WHY ISTA PASS</div>
+  <div class="section-title"><span class="g">3つ</span>の選ぶ理由</div>
+  <p class="section-desc">スポット利用より断然お得。上位プランほど予約できる未来が広がります。</p>
+  <div class="feat-list">
+    <div class="feat-item">
+      <div class="feat-icon">💸</div>
+      <div>
+        <div class="feat-title">スポット比で最大72%OFF</div>
+        <div class="feat-desc">スポット¥11,000/h を基準にすると、ISTA PASSは5h〜16hの利用権が圧倒的コスパ。使えば使うほど実質単価が下がります。</div>
+      </div>
+    </div>
+    <div class="feat-item">
+      <div class="feat-icon">📅</div>
+      <div>
+        <div class="feat-title">縛りなし・いつでも解約可</div>
+        <div class="feat-desc">最低契約期間ゼロ。月額を払った分だけ利用できます。「とりあえず1ヶ月」から試せます。</div>
+      </div>
+    </div>
+    <div class="feat-item">
+      <div class="feat-icon">🔒</div>
+      <div>
+        <div class="feat-title">上限19組の少数精鋭コミュニティ</div>
+        <div class="feat-desc">全プラン合計19組のみ。混雑知らずで撮影・配信に集中できる環境を維持。プラン別に枠が独立しているので、満員プランがあっても他プランから入会できます。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="gold-divider"></div>
+
+<!-- PLANS -->
+<div class="section">
+  <div class="section-label">PLANS</div>
+  <div class="section-title"><span class="g">3つ</span>のプラン</div>
+  <p class="section-desc">活動スタイルに合ったプランをお選びください。</p>
+
+  <div class="plan-cards">
+
+    <!-- STANDARD -->
+    <div class="plan-card">
+      <div class="plan-head">
+        <div class="plan-name">ISTA PASS STANDARD</div>
+        <div class="plan-price">¥19,800</div>
+        <div class="plan-unit">/ 月（税込）</div>
+        <div class="plan-equiv">スポット換算 ¥55,000相当</div>
+      </div>
+      <div class="plan-body">
+        <div class="plan-stat">
+          <div class="stat-icon">🕐</div>
+          <div class="stat-label">月間利用時間</div>
+          <div class="stat-val gold">5時間</div>
+        </div>
+        <div class="plan-stat">
+          <div class="stat-icon">📅</div>
+          <div class="stat-label">予約可能窓</div>
+          <div class="stat-val">支払日から <strong>30日以内</strong></div>
+        </div>
+        <div class="plan-stat">
+          <div class="stat-icon">👥</div>
+          <div class="stat-label">受入上限</div>
+          <div class="stat-val">10組</div>
+        </div>
+        <div class="plan-stat">
+          <div class="stat-icon">🎁</div>
+          <div class="stat-label">紹介報酬</div>
+          <div class="stat-val gold">¥2,000</div>
+        </div>
+        <div class="plan-stat">
+          <div class="stat-icon">💎</div>
+          <div class="stat-label">特典</div>
+          <div class="stat-val" style="font-size:12px;color:var(--text-sub)">なし</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CREATOR ★ -->
+    <div class="plan-card featured">
+      <div class="plan-badge">★ 主力プラン</div>
+      <div class="plan-head">
+        <div class="plan-name gold">ISTA PASS CREATOR</div>
+        <div class="plan-price">¥35,800</div>
+        <div class="plan-unit">/ 月（税込）</div>
+        <div class="plan-equiv">スポット換算 ¥99,000相当</div>
+      </div>
+      <div class="plan-body">
+        <div class="plan-stat">
+          <div class="stat-icon">🕐</div>
+          <div class="stat-label">月間利用時間</div>
+          <div class="stat-val gold">9時間</div>
+        </div>
+        <div class="plan-stat">
+          <div class="stat-icon">📅</div>
+          <div class="stat-label">予約可能窓</div>
+          <div class="stat-val">支払日から <strong>60日以内</strong></div>
+        </div>
+        <div class="plan-stat">
+          <div class="stat-icon">👥</div>
+          <div class="stat-label">受入上限</div>
+          <div class="stat-val">5組</div>
+        </div>
+        <div class="plan-stat">
+          <div class="stat-icon">🎁</div>
+          <div class="stat-label">紹介報酬</div>
+          <div class="stat-val gold">¥3,000</div>
+        </div>
+        <div class="plan-stat">
+          <div class="stat-icon">💎</div>
+          <div class="stat-label">特典</div>
+          <div class="stat-val" style="font-size:12px">HIROBAR 月1回無料</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRO -->
+    <div class="plan-card">
+      <div class="plan-head">
+        <div class="plan-name orange">ISTA PASS PRO</div>
+        <div class="plan-price">¥49,800</div>
+        <div class="plan-unit">/ 月（税込）</div>
+        <div class="plan-equiv">スポット換算 ¥176,000相当</div>
+      </div>
+      <div class="plan-body">
+        <div class="plan-stat">
+          <div class="stat-icon">🕐</div>
+          <div class="stat-label">月間利用時間</div>
+          <div class="stat-val gold">16時間</div>
+        </div>
+        <div class="plan-stat">
+          <div class="stat-icon">📅</div>
+          <div class="stat-label">予約可能窓</div>
+          <div class="stat-val">支払日から <strong>90日（3ヶ月）以内</strong></div>
+        </div>
+        <div class="plan-stat">
+          <div class="stat-icon">👥</div>
+          <div class="stat-label">受入上限</div>
+          <div class="stat-val">4組</div>
+        </div>
+        <div class="plan-stat">
+          <div class="stat-icon">🎁</div>
+          <div class="stat-label">紹介報酬</div>
+          <div class="stat-val gold">¥5,000</div>
+        </div>
+        <div class="plan-stat">
+          <div class="stat-icon">💎</div>
+          <div class="stat-label">特典</div>
+          <div class="stat-val" style="font-size:12px">HIROBAR 月1無料＋追加半額</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="gold-divider"></div>
+
+<!-- BOOKING WINDOW -->
+<div class="section">
+  <div class="section-label">BOOKING WINDOW</div>
+  <div class="section-title">予約できる<span class="g">「未来」</span>が変わる</div>
+  <div class="booking-intro">
+    上位プランほど先の日程まで予約できます。月間利用時間は1ヶ月ごとの完全リセット制。
+    複数月分の先取りや繰越はできません。
+  </div>
+  <div class="booking-cards">
+    <div class="bk-card">
+      <div class="bk-head std">
+        <span class="plan-tag">STANDARD</span>
+        スポット利用感覚で使いたい方に
+      </div>
+      <div class="bk-body">
+        <div class="bk-window">支払日から 30日以内</div>
+        <div class="bk-note">当月分（5h）を当月内で消化するスタイル。直近の予定を柔軟に入れられます。</div>
+      </div>
+    </div>
+    <div class="bk-card">
+      <div class="bk-head cre">
+        <span class="plan-tag">CREATOR ★</span>
+        月次で撮影スケジュールを組みたい方に
+      </div>
+      <div class="bk-body">
+        <div class="bk-window">支払日から 60日以内</div>
+        <div class="bk-note">翌月継続を前提に2ヶ月先まで見通せる。月1本YouTube投稿などに最適。</div>
+      </div>
+    </div>
+    <div class="bk-card">
+      <div class="bk-head pro">
+        <span class="plan-tag">PRO</span>
+        撮影を事業の軸に置くプロ向け
+      </div>
+      <div class="bk-body">
+        <div class="bk-window">支払日から 90日（3ヶ月）以内</div>
+        <div class="bk-note">3ヶ月先まで先行予約可。CM・企業案件など長期スケジュールに対応できます。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="gold-divider"></div>
+
+<!-- INCENTIVES -->
+<div class="section">
+  <div class="section-label">INCENTIVES</div>
+  <div class="section-title"><span class="g">2つ</span>の特典制度</div>
+
+  <div class="incentive-cards">
+    <div class="inc-card">
+      <div class="inc-card-head">
+        <div class="inc-icon">🎁</div>
+        <div class="inc-title">3ヶ月継続ボーナス</div>
+        <span class="tag tag-new">初回1回限り</span>
+      </div>
+      <div class="inc-amount">¥3,000 Amazonギフト</div>
+      <div class="inc-desc">
+        入会から3ヶ月連続で支払いが完了した時点でプレゼント。全プラン共通。
+        付与は<strong style="color:var(--gold-light)">入会から最初の1回のみ</strong>。
+        4ヶ月目以降の継続には再適用されません。
+      </div>
+    </div>
+
+    <div class="inc-card">
+      <div class="inc-card-head">
+        <div class="inc-icon">👥</div>
+        <div class="inc-title">アイスタ紹介クラブ</div>
+        <span class="tag tag-rec">プランで報酬額が変わる</span>
+      </div>
+      <div class="inc-desc" style="margin-bottom:12px">
+        あなたの紹介で入会した方の初回支払い確認後、Amazonギフトカードをプレゼント。
+        報酬は<strong style="color:var(--gold-light)">あなたのプラン</strong>で決まります。
+      </div>
+      <table class="referral-table">
+        <tr>
+          <th>あなたのプラン</th>
+          <th>報酬</th>
+        </tr>
+        <tr>
+          <td>STANDARD</td>
+          <td class="gold-text">¥2,000</td>
+        </tr>
+        <tr>
+          <td>CREATOR</td>
+          <td class="gold-text">¥3,000</td>
+        </tr>
+        <tr>
+          <td>PRO</td>
+          <td class="gold-text">¥5,000</td>
+        </tr>
+      </table>
+      <div style="margin-top:10px;font-size:11px;color:var(--text-sub)">
+        ※1段階のみ。月3件・年間¥30,000上限。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="gold-divider"></div>
+
+<!-- PERSON ONLY -->
+<div class="section">
+  <div class="section-label">IMPORTANT</div>
+  <div class="section-title">本人<span class="g">専用</span>のスタジオパス</div>
+  <div class="person-only">
+    <strong>⚠️ 契約者本人の立ち会いが必須です</strong>
+    ISTA PASSはご本人のクリエイター活動を応援するサービスです。
+    又貸しや代理人のみでの利用はご遠慮ください。
+    スタジオ利用時は<strong style="color:var(--gold-light)">契約者本人が必ずご同席ください</strong>
+    （同行スタッフ・モデル・アシスタントの入室は問題ありません）。
+  </div>
+</div>
+
+<div class="gold-divider"></div>
+
+<!-- RULES -->
+<div class="section">
+  <div class="section-label">RULES</div>
+  <div class="section-title">ご利用<span class="g">ルール</span></div>
+  <div class="caution">
+    <div class="caution-title">⚠️ 入会前にご確認ください</div>
+    <ul>
+      <li>時間は月間完結制。繰越・先取り不可</li>
+      <li>解約後3ヶ月は再加入申請不可（違約金ではなく加入資格条件）</li>
+      <li>休止制度なし。使わない月は解約してください</li>
+      <li>満員のプランは受付停止。再開時はLINE公式でご案内</li>
+      <li>本人立ち会い必須・又貸し禁止</li>
+    </ul>
+  </div>
+  <div class="rule-list">
+    <div class="rule-item">
+      <div class="rule-mark ok">✓</div>
+      <div class="rule-text">
+        <strong>縛りなし・いつでも解約可</strong>
+        最低契約期間なし。翌月以降は支払わなければ利用終了。
+      </div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-mark ok">✓</div>
+      <div class="rule-text">
+        <strong>同行者・アシスタントはOK</strong>
+        モデル・スタッフ・撮影チームの入室可。契約者本人が同席すること。
+      </div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-mark ng">✗</div>
+      <div class="rule-text">
+        <strong>時間の繰越・先取り不可</strong>
+        当月分（5h/9h/16h）は有効期間内のみ使用可。未使用分は消滅します。
+      </div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-mark ng">✗</div>
+      <div class="rule-text">
+        <strong>解約後3ヶ月は再加入不可</strong>
+        解約から3ヶ月間は再申請を受け付けません。
+      </div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-mark ng">✗</div>
+      <div class="rule-text">
+        <strong>又貸し・代理人のみ利用禁止</strong>
+        PASSは契約者本人専用です。本人不在での利用はお断りします。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="gold-divider"></div>
+
+<!-- HOW TO JOIN -->
+<div class="section">
+  <div class="section-label">HOW TO JOIN</div>
+  <div class="section-title">入会の<span class="g">流れ</span></div>
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="flow-num">1</div>
+      <div class="flow-content">
+        <div class="flow-title">LINE でご相談・プラン選択</div>
+        <div class="flow-desc">気になるプランや不明点をLINEでお知らせください。現在の空き状況もご案内します。</div>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">2</div>
+      <div class="flow-content">
+        <div class="flow-title">Wix で決済手続き</div>
+        <div class="flow-desc">決済リンクをお送りします。クレジットカードまたは対応決済方法で初月分をお支払いください。</div>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">3</div>
+      <div class="flow-content">
+        <div class="flow-title">メンバーグループへ招待</div>
+        <div class="flow-desc">支払い確認後、予約カレンダーへのアクセスとLINEメンバーグループへの招待をお送りします。</div>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">4</div>
+      <div class="flow-content">
+        <div class="flow-title">予約 → 利用スタート！</div>
+        <div class="flow-desc">プランの予約可能窓内でご希望の日時を予約してください。初回利用前にスタジオ案内をお送りします。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="gold-divider"></div>
+
+<!-- FAQ -->
+<div class="section">
+  <div class="section-label">FAQ</div>
+  <div class="section-title">よくある<span class="g">ご質問</span></div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      <div class="faq-q-icon">Q</div>
+      途中解約した場合、残り時間はどうなりますか？
+    </div>
+    <div class="faq-a">
+      解約月の有効期限（支払日から30/60/90日）内であれば引き続きご利用いただけます。有効期限を過ぎた残時間は消滅します。日割り返金は行っておりません。
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      <div class="faq-q-icon">Q</div>
+      満員の場合はどうなりますか？
+    </div>
+    <div class="faq-a">
+      満員のプランは受付を一時停止します。再開時はLINE公式アカウントにてお知らせします。プランごとに枠が独立しているため、あるプランが満員でも別プランは入会できる場合があります。
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      <div class="faq-q-icon">Q</div>
+      撮影スタッフやモデルも一緒に使えますか？
+    </div>
+    <div class="faq-a">
+      はい。スタジオは契約者本人＋同行者でご利用いただけます。ただし、契約者本人が必ずご同席ください。本人不在で第三者のみでの利用はできません。
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      <div class="faq-q-icon">Q</div>
+      一度解約して再加入できますか？
+    </div>
+    <div class="faq-a">
+      解約から3ヶ月が経過すれば再加入の申請が可能です。ただし満員の場合はウェイティングリスト待ちとなります。
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      <div class="faq-q-icon">Q</div>
+      利用しない月だけ一時休止できますか？
+    </div>
+    <div class="faq-a">
+      休止には対応しておりません。使わない月は解約し、再び利用したい場合は改めてお申し込みください（解約から3ヶ月経過後に再申請可能）。
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      <div class="faq-q-icon">Q</div>
+      プランを途中で変更できますか？
+    </div>
+    <div class="faq-a">
+      翌月からのプラン変更が可能です。変更ご希望の場合はLINEでご相談ください。希望プランに空きがある場合のみ変更手続きを承ります。
+    </div>
+  </div>
+</div>
+
+<div class="gold-divider"></div>
+
+<!-- BOTTOM CTA -->
+<div class="bottom-cta" id="apply">
+  <h2>まずは<span style="background:var(--gold-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">空き状況</span>を<br>確認してみてください</h2>
+  <p>
+    現在の残り枠・ウェイティング状況はLINEでリアルタイムにお伝えします。
+    質問だけでもお気軽にどうぞ。
+  </p>
+  <a href="https://lin.ee/9YJCJjn" class="cta-btn">
+    LINE で空き確認・お申し込み
+    <span class="cta-btn-sub">友達追加 → トーク → 「PASS 相談」と送信</span>
+  </a>
+  <div class="cta-note">
+    ※ LINE登録後、スタッフが2営業日以内にご返信します
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div style="margin-bottom:8px;color:var(--gold);font-weight:700;font-size:12px">
+    クリエイターズ・ラボ アイスタ名古屋
+  </div>
+  合同会社アイスタ名古屋<br>
+  愛知県名古屋市中区<br>
+  <br>
+  ※ 本LP記載の価格・条件は予告なく変更になる場合があります。<br>
+  ※ 最新情報・確定内容はLINEにてスタッフにお問い合わせください。
+</footer>
+
+</body>
+</html>
